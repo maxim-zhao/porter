@@ -239,7 +239,7 @@ class Yaf extends ExportController {
         return $value;
     }
 
-    public function convertPassword($hash, $columnName, &$row) {
+    public function convertPassword($hash, $columnName, $row) {
         $salt = $row['PasswordSalt'];
         $hash = $row['Password2'];
         $method = $row['PasswordFormat'];
